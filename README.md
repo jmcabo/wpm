@@ -11,6 +11,8 @@ Everything is entirely contained in a single .html:
 
 With this, you can learn to touch type **without using the Cloud**, and edit the file and add your own paragraphs, in other languages too.
 
+It doesn't save anything onlinie. The scoreboard is lost when the browser is closed. It can be saved to disk and used offline with a file:/// url.
+
 Copyright (c) Juan Manuel Cabo, 2014, 2015. All rights reserved.
 
 --jm
