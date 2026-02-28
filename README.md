@@ -10,4 +10,5 @@ Everything is entirely contained in a single .html:
 With this, you can learn to touch type **without using the Cloud**, and edit the file and add your own paragraphs, in other languages too.
 
 Copyright (c) Juan Manuel Cabo, 2014, 2015. All rights reserved.
+
 --jm
