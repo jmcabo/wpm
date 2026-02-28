@@ -1,6 +1,8 @@
 # wpm
 Similar to the old version of Type Racer, written from scratch, using some of the most popular paragraphs quotations. It measures Words per Minute and errors.
 
+Click here to start using it: https://jmcabo.github.io/wpm/wpm.html
+
 Written entirely in Javascript and html, it only requires jquery.
 Everything is entirely contained in a single .html:
 
