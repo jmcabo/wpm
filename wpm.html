@@ -1,0 +1,541 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>▒ WPM</title>
+<script type="text/javascript" src="jquery-1.11.1.js" ></script>
+<script type="text/javascript">
+    var texts = [
+        "Let's face it: there are tons of things in your home and life that you don't use, need, or even particularly want. Whether you realize it or not, this clutter creates indecision and distractions, consuming attention and making unfettered happiness a real chore.", //4week
+        "The milk and cheese and yogurt, which once came from dairy cows that grazed on grass, now typically come from cows that spend their working lives indoors tethered to machines, eating corn.",
+        "Whether you're a student, secretary, office administrator, manager, computer programmer, or engineer, typing is an invaluable skill. It's a skill that can open doors and enhance your career opportunities.",
+        "Although the United Nations does not have the power to enforce decisions or compel nations to take military action, the ability to compel member nations to impose economic sanctions against countries guilty of violating security orders gives it significant power in the world stage.", //UN
+
+        "Don't make assumptions - find the courage to ask questions and to express what you really want. Communicate with others as clearly as you can to avoid misunderstandings, sadness and drama. With just this one agreement, you can completely transform your life.", //FourAgree
+        "Always do your best - your best is going to change from moment to moment; it will be different when you are healthy as opposed to sick. Under any circumstance, simply do your best.",
+
+        "We've known each other for many years but this is the first time you've ever come to me for counsel or for help. I can't remember the last time you invited me to your house for a cup of coffee, even though my wife is Godmother to your only child.", //Godfather
+        //"We've known each other for many years but this is the first time you've ever come to me for counsel or for help. I can't remember the last time you invited me to your house for a cup of coffee, even though my wife is Godmother to your only child. But, let's be frank here. You never wanted my friendship and you were afraid to be in my debt.",
+        "Now you come to me and you say, \"Don Corleone, give me justice.\" But you don't ask with respect. You don't offer friendship. You don't even think to call me Godfather.",
+        "Focus your attention on the Now and tell me what problem you have at this moment. I am not getting any answer because it is impossible to have a problem when your attention is fully in the Now.",
+        "The good news is that your child has a natural desire to do well. Your job as parent is to bring out this quality and cherish it until the day your kids leave home, and then some.",
+        "The sooner your kids appreciate the value of work, the more successful they will be. Work is part of life. You work to earn money, put food on the table, and keep your homes orderly and clean. For your kids, work involves schoolwork, homework, and teamwork at home and in the community.",
+
+        "One scientist I met recently told me he reckoned that the average household in Europe or North America has so many devices and such a variety of food and clothing that to produce the same lifestyle in Roman times would have required six thousand slaves.", //Greek
+
+        "We've arranged a global civilization in which most crucial elements profoundly depend on science and technology. We have also arranged things so that almost no one understands science and technology. This is a prescription for disaster.",
+        "At first they had tried to keep the finding quiet. After all, they were not absolutely sure it was an extraterrestrial message. A premature or mistaken announcement would be a public relations disaster. But worse than that, it would interfere with the data analysis. If the press descended, the science would surely suffer.",
+        "At first they had tried to keep the finding quiet. After all, they were not absolutely sure it was an extraterrestrial message. A premature or mistaken announcement would be a public relations disaster.",
+
+        "I will need my spectacles and a clear head. Today I broke my rules and I drank vodka. Tomorrow I will translate it, and then I will bring what I've done to your home.",
+        "There is a trick for learning to type faster. That trick is to type words rather than letters.",
+        "Music finds a comfortable parallel with that of human language. Much as language has words, sentences, and stories, music has tones, melodies, and songs.",
+        "The theory of music emphasizes the elements from which music is composed. One such structure is the melody, which is a grouping of musical notes that combine into a basic, but immensely flexible structure. Another is the chord, which is two or more notes played simultaneously to create a harmony.", //Music
+
+        //"I know a bloke who knows a bloke who knows a bloke. Now, I know you know this bloke. This is a bloke you know.",
+        "A computer needs a manager to administer its operations, just as a company needs a manager. And that is what DOS is. A manager. It manages the operations in your computer.",
+        //"A computer needs a manager to administer its operations, just as a company needs a manager. And that is what DOS is. A manager.",
+        "I was hugely impressed. Kirk, I mean Shatner, was the ultimate example of a man who knew what he didn't know, was perfectly willing to admit it, and didn't want to leave until he understood. That's heroic to me.",
+        "A giant inverted steel pyramid is perfectly balanced on its point. Any movement of the pyramid will cause it to topple over. Underneath the pyramid is a hundred dollar bill. How do you remove the bill without disturbing the pyramid? The only way you can get the answer is if it comes to you suddenly in the blink of an eye.",
+        "Never give up, no matter how far behind you are, no matter how unlikely it seems you will catch your competitor in front of you. Keep pushing until the checkered flag falls.",
+        "Never give up, no matter how far behind you are, no matter how unlikely it seems you will catch your competitor in front of you. Keep pushing until the checkered flag falls. How many times have you seen the leader of a race have a mechanical problem with only a few laps to go? You will never be able to take advantage of their problems if you are not close. You have to be close to take advantage of luck.",
+        "If you want to drive a race car well, whether to win an Indy car race or just have fun competing in the middle of the pack in an amateur race, you must be seated properly in the car. First of all, you must be comfortable, otherwise it will be overly tiring and very difficult to concentrate. Many races have been lost simply because a driver lost concentration due to discomfort from a poorly fitted seat.",
+        //"How many times have you seen the leader of a race have a mechanical problem with only a few laps to go? You will never be able to take advantage of their problems if you are not close. You have to be close to take advantage of luck.",
+
+        "Alfred Hitchcock once said, \"Drama is life with the dull bits cut out.\" Reflecting the interesting (and often) tragic parts of \"life\" on the stage was an important part of the ancient world, and helped to shape our modern culture.",
+
+        "I'd been walking for hours and, as usual, I'd lost track of where I was, when I suddenly realized I'd reached the city limits. I immediately felt happy and, without hesitation, passed beyond the barrier and found myself walking between cultivated fields and meadows.",
+
+        "By studying the cooling of pizza in the gravity free environment of the space shuttle, we could more exactly determine the importance of convective flows.",
+
+        "Warmer water increases the moisture content of storms, and warmer air holds more moisture. When storm conditions trigger a downpour, more of it falls in the form of big, one-time rainfalls and snowfalls.",
+        "Warmer water increases the moisture content of storms, and warmer air holds more moisture. When storm conditions trigger a downpour, more of it falls in the form of big, one-time rainfalls and snowfalls. Partly as a result, the number of large flood events has increased decade by decade, on every continent.",
+        "There are two places on Earth that serve as canaries in the coal mine - regions that are especially sensitive to the effects of global warming. The first is the Arctic. The second is the Antarctic. In both of these frozen realms, scientists are seeing faster changes and earlier more dramatic effects of climate change than anywhere else on Earth.",
+        "Ergonomics is a term that combines the Greek word ergon, meaning \"work,\" and the English word economics. Simply stated, it is \"the study and management of the relationship between the worker and the environment.\"",
+        "The world of typing has changed. In the 1970s, every business had rooms full of secretaries whose job it was to type letters that had been hand-written. They were copying the writing into a more readable format. In the early 1980s, the personal computer became a common office machine.",
+        "When you are typing on a typewriter, your input appears directly on paper. When you are typing on a computer, your input appears on a screen and is transferred to paper after the proper command has been given.",
+
+        "Although his voice was also broken by uncertainty and his hands seemed to doubt the existence of things, it was evident that he came from the world where men could still sleep and remember.", //HundredYears
+        "In the witch trials, it was nearly impossible to provide compelling alibis for accused witches: The rules of evidence had a special character. For example, in more than one case a husband attested that his wife was asleep in his arms at the very moment she was accused of frolicking with the devil; but the archbishop patiently explained that a demon had taken the place of the wife.", //Witch
+
+        "No man is an island, entire of itself; every man is a piece of the continent, a part of the main. If a clod be washed away by the sea, Europe is the less, as well as if a promontory were, as well as if a manor of thy friend's or of thine own were: any man's death diminishes me, because I am involved in mankind, and therefore never send to know for whom the bell tolls; it tolls for thee.", //BellTolls
+
+        "The pathology of setting a deadline to the earliest articulable date essentially guarantees that the schedule will be missed. Even the strategy of picking the \"most likely date\" is not particularly safe, as the area to the left of the peak of the curve is barely a third. That says there is a two-thirds chance of missing the deadline.",
+
+        "Common knowledge has bicyclists always riding into the wind, regardless of direction, a perception that is not as wrong as it may seem. On level ground, one rides as fast as is comfortable and because the bicycle is highly efficient, speed is limited by wind resistance. With a tailwind, speeding up until the wind is in one's face is fairly easy, and at that point it becomes a headwind.",
+
+        "Good games offer players a set of challenging problems and then let them practice these until they have routinized their mastery.",
+        "Good games stay within, but at the outer edge, of the player's regime of competence. That is, they feel doable but challenging. This makes them pleasantly frustrating.",
+        "Good games stay within, but at the outer edge, of the player's regime of competence. That is, they feel doable but challenging. This makes them pleasantly frustrating - a flow state for human beings.", //VideoGames
+
+        "Like painting, most software is intended for a human audience. And so hackers, like painters, must have empathy to do really great work. You have to be able to see things from the user's point of view.",
+
+        "According to the popular story, the keyboard invented by August Dvorak, a professor of education at the University of Washington, is vastly superior to the Qwerty keyboard developed by Christopher Sholes that is now in common use. We are to believe that, although the Dvorak keyboard is vastly superior to the Qwerty, virtually no one trains on Dvorak because there are too few Dvorak typists.", //Dvorak
+        "The typewriter had a problem, though. Try to type quickly on it, and the type bars banged into one another and got stuck. The solution to that problem resulted in the keyboard we know today.",
+
+        "Ever since I was a child, folks have thought they had me pegged, because of the way I am, the way I talk. And they're always wrong.",
+
+        "There's a piece of Maria in every song that I sing. And the price of a memory is the memory of the sorrow it brings. And there is always one last light to turn out and one last bell to ring. And the last one out of the circus has to lock up everything.",
+
+        "Let me tell you why you're here. You're here because you know something. What you know you can't explain, but you feel it. You've felt it your entire life, that there's something wrong with the world. You don't know what it is, but it's there, like a splinter in your mind, driving you mad. It is this feeling that has brought you to me. Do you know what I'm talking about?", //Matrix
+
+        "Once you get into the processed foods you have to be a fairly determined ecological detective to follow the intricate and increasingly obscure lines of connection linking the Twinkie, or the nondairy creamer, to a plant growing in the earth some place, but it can be done.",
+        "You have to be a fairly determined ecological detective to follow the intricate and increasingly obscure lines of connection linking the Twinkie to a plant growing in the earth some place.",
+        
+        "Advertising has these people chasing cars and clothes they don't need. Generations have been working in jobs they hate, just so they can buy what they don't really need.",
+
+        "Images of broken light which dance before me like a million eyes - they call me on and on across the universe. Thoughts meander like a restless wind inside a letter box - they tumble blindly as they make their way across the universe.",
+        "She's got a smile that, it seems to me, reminds me of childhood memories, where everything was as fresh as the bright blue sky.",
+        "She's got a smile that, it seems to me, reminds me of childhood memories, where everything was as fresh as the bright blue sky. Now and then when I see her face she takes me away to that special place and if I'd stare too long I'd probably break down and cry.",
+
+        "Since the ninja is that being than which nothing sweeter can be conceived and that being exists in the mind and in reality, the ninja exists in reality.",
+        "The goal of the true seeker is to become a sage, or superior man. There are certain immutable laws of the universe, which the sage must be in harmony with. Different Ninja sects espouse some laws in particular, but each law is essential in its own right, and must be considered equal to the rest.",
+        "The goal of the true seeker is to become a sage, or superior man. There are certain immutable laws of the universe, which the sage must be in harmony with. Different Ninja sects espouse some laws in particular, according them greater significance than the others. But each law is essential in its own right, and must be considered equal to the rest.",
+        "Many people limit themselves to leading boring, dull lives by accepting the judgment of others that they are of low intelligence. This is not so. Just because one does not process sensory information and replay it the same way as everyone else does not mean that there is a lack of comprehension or interest.",
+
+        "The chemistry of an element is determined by the manner in which its electrons are arranged in the atom. Such arrangements are the basis of the modern periodic classification of the elements: the Periodic Table.",
+
+        "It was one of those days when it's a minute away from snowing and there's this electricity in the air, you can almost hear it. And this bag was, like, dancing with me. Like a little kid begging me to play with it. For fifteen minutes. And that's the day I knew there was this entire life behind things, and this incredibly benevolent force.",
+
+        "But speculations on the structure of the universe also move in quite another direction. The development of non-Euclidean geometry led to the recognition of the fact, that we can cast doubt on the infiniteness of our space without coming into conflict with the laws of thought or with experience.", //Relativity
+
+        "For it is not enough to have a good mind; the main thing is to apply it well. The greatest souls are capable of the greatest vices as well as the greatest virtues. And those who proceed only very slowly can make much greater progress, provided they always follow the right path, than those who hurry and stray from it.", //Descartes
+        "For it is not enough to have a good mind; the main thing is to apply it well. The greatest souls are capable of the greatest vices as well as the greatest virtues.",
+
+        "To drive out of the Central Valley of California on a hot day and into San Francisco is to feel like you're landing on another planet. Over our two-hour drive, the temperature went from nearly a hundred to the middle sixties. The visual disparity was as dramatic. On one side of the bay was a day so bright you'd have to squint with the visor down and your sunglasses on. As we crossed into the fog, it didn't seem possible that two such environments could exist side by side.",
+        "To drive out of the Central Valley of California on a hot day and into San Francisco is to feel like you're landing on another planet. Over our two-hour drive, the temperature went from nearly a hundred to the middle sixties.",
+
+        "If you begin to repeat an error, or if your concentration or attention starts to fade, if you start to become casual, then stop. Clear your head, get your concentration and motivation back, then go again.", //FirstSpeedSecrets
+        "If the driver would only slow down, the car would actually go faster. It reminds me of the saying, \"never confuse movement for action.\"",
+        "Every time you practice a technique incorrectly, you're increasing your chances of doing it wrong again. It's easy to become very experienced at repeating the same mistakes. Practice doesn't make perfect; only perfect practice makes perfect.", //SpeedSecrets
+        "Every time you practice a technique incorrectly, you're increasing your chances of doing it wrong again. Practice doesn't make perfect; only perfect practice makes perfect.", 
+        "In most cases, there is more to be gained by maximizing the performance of the driver than tricking out the car.", //SpeedSecrets
+        "The less you do with the controls, the less chance of error. The slower you move, the faster the car moves.", //SpeedSecrets
+
+        "When the mind is brought to rest and not allowed to wander, a deep calm pervades body and mind, a state of tranquility which must be experienced to be understood.",
+
+        "Desktop publishing revolutionized the creation of printed documents, not only from the standpoint of speed and accuracy, but also by enabling anyone to mass-produce the printed word.", //Accuracy
+        "Today, computers have taken this ancient art out of the craftsman's workshop and placed it on the desktop. Desktop publishing revolutionized the creation of printed documents, not only from the standpoint of speed and accuracy, but also by enabling anyone to mass-produce the printed word without investing the many years it takes to learn the trade.", //Accuracy
+
+        "With no map to navigate one's life, some of us have stood stock-still. In such a world of confused roles, time lines, and expectations, the simplest decisions could sometimes become problematic. Forget figuring out how to chart a career and start a family; some of us, like the characters on Seinfeld, couldn't figure out how to go to the movies.",
+
+        "We sit silently and watch the world around us. This has taken us a lifetime to learn. It seems only the old are able to sit next to one another and not say anything and still feel content. The young, brash and impatient, must always break the silence. It is a waste, for silence is pure.",
+        "We sit silently and watch the world around us. This has taken us a lifetime to learn. It seems only the old are able to sit next to one another and not say anything and still feel content. The young, brash and impatient, must always break the silence. It is a waste, for silence is pure. Silence is holy. It draws people together because only those who are comfortable with each other can sit without speaking. This is the great paradox.",
+
+        "Kid, I've flown from one side of this galaxy to the other, and I've seen a lot of strange stuff. But I've never seen anything to make me believe that there's one all-powerful Force controlling everything. There's no mystical energy field that controls MY destiny.",
+
+        "Data is by definition easy to copy. And the Internet makes copies easy to distribute. So it is no wonder companies are afraid. But, as so often happens, fear has clouded their judgment. The government has responded with draconian laws to protect intellectual property. They probably mean well. But they may not realize that such laws will do more harm than good.",
+
+        "To some, the rules of etiquette may seem outdated, stuffy and unnecessary, but the fact remains that they serve as a sort of social weed-whacker eliminating unsavory growths from popping up in the world's finer gardens. The truth is that first impressions are usually lasting ones, and a bad first impression can sometimes be insurmountable.",
+        "Your inner child will be happy to know that when it comes to wine, it's okay to like some colors more than others. You can't get away with saying \"I don't like green food!\" much beyond your sixth birthday, but you can express a general preference for white, red, or pink wine for all your adult life.",
+
+        "Sometimes you concentrate more on racing the cars around you, rather than focusing on what you need to do. Having said that, some drivers actually perform best when there is a little extra incentive - like chasing another car. But be careful you don't get too caught up in what the competition is doing. Focus on your own performance rather than on the competition.",
+
+        "Instead of hiring workers during the peak hog kill in the winter and then laying them off when the work slowed down, Jay had instituted a system of paying workers a steady wage year-round. A 1937 Fortune magazine article about this and other progressive labor policies at Hormel might well shock those familiar only with the company's labor relations in the 1980s.",
+
+        "There are still some places where you can get all you can eat for a fixed price. Fried chicken is the best and the easiest to pocket, or should we say bag. Another trick is to pour your second free cup of hot coffee into the plastic bag sewed inside your pocket and take it with you.",
+
+        "Is it really necessary to send that email? The more emails you send, the more work others will have to do to prioritize your requests. How many of the things you're mentioning are important? If you have 10 issues to discuss, break them into two groups and focus on the most important group.",
+
+        "When she returns to the forum page, her post is there. It is a way now, approximately, of being at home. The forum has become one of the most consistent places in her life, like a familiar cafe that exists somehow outside of geography and beyond time zones.",
+        "It is by will alone I set my mind in motion. It is by the juice of Sapho that thoughts acquire speed, the lips acquire stains, the stains become a warning. It is by will alone I set my mind in motion.",
+
+        "Since every piece of matter in the Universe is in some way affected by every other piece of matter in the Universe, it is in theory possible to extrapolate the whole of creation - every sun, every planet, their orbits, their composition and their economic and social history from, say, one small piece of fairy cake.",
+        "Space is big. Really big. You just won't believe how vastly hugely mindbogglingly big it is. I mean you may think it's a long way down the road to the chemist, but that's just peanuts to space.",
+        "There is a theory which states that if anybody ever discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable. There is another theory which states that this has already happened.",
+        "This planet has, or rather had, a problem, which was this: most of the people on it were unhappy for pretty much of the time. Many solutions were suggested for this problem, but most of these were largely concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't the small green pieces of paper that were unhappy.",
+        "The place to improve the world is first in one's own heart and head and hands, and then to work outward from there. Other people can talk about how to expand the destiny of mankind. I just want to talk about how to fix a motorcycle. I think that what I have to say has more lasting value.",
+        "Any finite number divided by infinity is as near to nothing as makes no odds, so the average population of all the planets in the Universe can be said to be zero. From this it follows that the population of the whole Universe is also zero, and that any people you may meet from time to time are merely the products of a deranged imagination.",
+
+        "The only message I got was from the company that holds my student loan, Sallie Mae. Sallie Mae sounds like a naive and barefoot hillbilly girl but in fact they are a ruthless and aggressive conglomeration of bullies located in a tall brick building somewhere in Kansas. I picture it to be the tallest building in that state and I have decided they hire their employees straight out of prison.",
+        "Gardeners know how to grow top-notch crops. They determine which plants thrive best under available conditions, plan their optimum placement, and nourish the seeds with plant food and water. Plants that receive the most attention thrive, blossoming into colorful fruits and flowers.",
+        "I've always wondered about this coat business. When I'm in a theater, I either fold mine in my lap or throw it over my armrest, but Patsy always spreads hers out, acting as if the seat back were cold, and she couldn't possibly enjoy herself while it was suffering.",
+        "The beginner writes just twenty pieces. The professional writes three times what's needed, as many as sixty different bits, keeps trying them out on small groups (but never your own family), rewrites discards, rewrites some more, then finally settles on the twenty which work best for that specific audience.",
+        "I know that you weren't bored that day because there was a lot of stuff on TV, and then The Blair Witch Project was coming on Starz and you were like, \"I haven't seen this since it came out and if so we should watch it\" and then, \"but oh, no, we should just make out instead!\"",
+        "The brain can be a tool. It can recall phone numbers, solve math puzzles, or create poetry. In this way, it works for the rest of the body, like a tractor. But when you can't stop thinking of that math problem or phone number, or when troubling thoughts and memories arise without your intent, it's not your brain working, but your mind wandering. Then the mind controls you; then the tractor has run wild.",
+        "Around midafternoon, the snow thinned into sleet, and some umbrellas appeared on Kissena Boulevard. When the green lights came on, pedestrians skirted or jumped across the puddles gathering at the curbs.",
+        "There is something about yourself that you don't know. Something that you will deny even exists, until it's too late to do anything about it. It's the only reason you get up in the morning. We share an addiction. We're approval junkies. We're all in it for the slap on the back and the gold watch.",
+
+        "for (int i=0; i < 10; ++i) {printf(\"Counting: %d\\n\");}",
+
+        "Time is tricky. You have whole months, even years, when nothing changes a speck, when you don't go anywhere or do anything or think one new thought. And then you can get hit with a day, or an hour, or a half a second when so much happens its almost like you got born all over again into some brand-new person you for damn sure never expected to meet.",
+
+
+    ];
+
+    var str = "";
+    var currentTextIndex = 0;
+
+    var typedStr = "";
+    var wordNumber = 0;
+    var startTime = 0;
+    var startTimeValid = false;
+    var totalInsertedChars = 0;
+    var wrongCount = 0;
+    var lastWord = null;
+    var runsWpmSum = 0;
+    var runsWpmCount = 0;
+
+    function prevText() {
+        --currentTextIndex;
+        if (currentTextIndex < 0) {
+            currentTextIndex = texts.length-1;
+        }
+        $("#selectText").val(currentTextIndex);
+        start();
+    }
+
+    function nextText() {
+        ++currentTextIndex;
+        if (currentTextIndex >= texts.length) {
+            currentTextIndex = 0;
+        }
+        $("#selectText").val(currentTextIndex);
+        start();
+    }
+
+    function textSelectedCombo() {
+        var index = $("#selectText").val() - 0;
+        currentTextIndex = index;
+        start();
+    }
+
+    function textSelectedLink(textIndex) {
+        currentTextIndex = textIndex - 0;
+        $("#selectText").val(currentTextIndex);
+        start();
+    }
+
+    function start() {
+        str = texts[currentTextIndex];
+
+        $("#typetext").text(str);
+        typedStr = "";
+        wordNumber = 0;
+        startTime = 0;
+        startTimeValid = false;
+        wrongCount = 0;
+        totalInsertedChars = 0;
+        lastWord = null;
+
+        $("#typer").attr("disabled", false);
+        $("#typer").removeClass("typerInputWrong");
+        $("#typer").val("");
+        $("#typer").focus();
+        $("#typer").select();
+    }
+
+    function clearOutput() {
+        $("#outputLatest").html("&nbsp;");
+        $("#outputRest").html("&nbsp;");
+        runsWpmCount = 0;
+        runsWpmSum = 0;
+        $("#averageWpm").text("0");
+    }
+
+    function outsTop(s) {
+        var last = $("#outputLatest").html();
+        var rest = $("#outputRest").html();
+
+        //Append previous to beginning of rest:
+        rest = last + rest;
+
+        last = s + "\n<br>";
+
+        $("#outputRest").html(rest);
+        $("#outputLatest").html(last);
+    }
+
+    function outs(s) {
+        $("#output").html($("#output").html() + s + "\n<br>");
+    }
+
+    function processInput() {
+
+        if (!startTimeValid) {
+            //Start measuring time on first key press:
+            startTimeValid = true;
+            startTime = new Date().getTime();
+        }
+
+        var typedWord = $("#typer").val();
+
+        //LastWord is used to determine if the user inserted or deleted chars.
+        //Deleting chars doesn't count as mistakes.
+        var newCharInserted = false;
+        if ((lastWord === null && typedWord.length > 0)
+            || (lastWord !== null && lastWord != typedWord && typedWord.length >= lastWord.length)) 
+        {
+            ++totalInsertedChars;
+            newCharInserted = true;
+        }
+
+        if (!(str.indexOf(typedStr + typedWord) === 0)) {
+            //Wrong text typed:
+            $("#typer").addClass("typerInputWrong");
+            if (newCharInserted) {
+                ++wrongCount;
+            }
+            lastWord = typedWord;
+        } else {
+            //Text typed so far is correct:
+            $("#typer").removeClass("typerInputWrong");
+
+            lastWord = typedWord;
+
+            //Word detection:
+            if (typedWord.length > 0 
+                && (typedWord.charAt(typedWord.length-1) == " "
+                   || typedStr.length + typedWord.length == str.length))
+            {
+                //A new word was entered successfully:
+                typedStr = typedStr + typedWord;
+
+                //Allow multiple words to be inserted:
+                wordNumber += typedWord.trim().split(/\s+/).length;
+                //One word at a time: ++wordNumber;
+
+                $("#typer").val("");
+                lastWord = null;
+
+                //Detect end of Text:
+                if (typedStr.length == str.length) {
+                    //Show final WPM:
+                    var elapsedMs = new Date().getTime() - startTime;
+                    var wpm = typedStr.length / (elapsedMs / 1000) / 5 * 60;
+                    wpm = Math.round(wpm * 10) / 10;
+                    $("#labelWpm").text(wpm);
+                    $("#labelWpm").css("color", "green");
+
+                    //Show results in output:
+                    var elapsedSecs = Math.round(elapsedMs / 1000 * 10) / 10;
+                    var accuracy = Math.round((100.0 - wrongCount * 100 / totalInsertedChars) * 100) / 100;
+                    //T20 FINISHED!    100.6 wpm      100% (35.4s)
+                    outsTop("<a style='color: gray; font-size: 12px; cursor: pointer;' onclick='textSelectedLink("+currentTextIndex+"); return false' title='" + texts[currentTextIndex].substr(0,20) + "'>T"+ (currentTextIndex+1) +"</a> FINISHED! &nbsp;&nbsp;&nbsp;" + wpm + " wpm  &nbsp;&nbsp;&nbsp;&nbsp; " + accuracy + "% (" + elapsedSecs + "s)");
+
+                    //Disable textbox:
+                    $("#typer").attr("disabled", "disabled");
+
+                    //Focus a button, otherwise, the shortcuts don't work when the textbox is disabled:
+                    $("#startButton").focus();
+
+                    //Compute average WPM:
+                    ++runsWpmCount;
+                    runsWpmSum += wpm;
+                    var averageWpm = Math.round(runsWpmSum / runsWpmCount * 10) / 10;
+                    $("#averageWpm").text(averageWpm);
+                } else {
+                    //Update WPM here, after a correct word:
+                    var elapsedMs = new Date().getTime() - startTime;
+                    var wpm = typedStr.length / (elapsedMs / 1000) / 5 * 60;
+                    wpm = Math.round(wpm);
+                    $("#labelWpm").text(wpm);
+                    $("#labelWpm").css("color", "rgb(68, 102, 102)");
+                }
+            }
+        }
+
+        highlightCurrentWord();
+    }
+
+    function highlightCurrentWord() {
+        //Highlight n-th word:
+        var wordCount = 0;
+        var begin = 0;
+        var end = 0;
+        for (var i=0; i < str.length; ++i) {
+            //Find beginning of n-th word:
+            if (wordNumber == wordCount) {
+                begin = i;
+                //Find ending of that word:
+                end = str.length;
+                for (var j=i; j < str.length; ++j) {
+                    if (str.charAt(j) == " ") {
+                        end = j;
+                        break;
+                    }
+                }
+                break;
+            }
+            if (str.charAt(i) == " ") {
+                ++wordCount;
+            }
+        }
+        var part1 = str.substr(0, begin);
+        var partWord = str.substr(begin, end - begin);
+        var part2 = str.substr(end);
+        $("#typetext").html(part1 + "<span style='text-decoration: underline; color: rgb(153, 204, 0)'>" + partWord + "</span>" + part2);
+    }
+
+    //charCode,  <---
+    //keyCode
+    function typerKeypress(ev) {
+        setTimeout(function() {
+            processInput();
+        }, 1);
+    }
+
+    function shortcuts(ev) {
+        if (ev.keyCode == 0x1B) { //ESC
+            start();
+            ev.preventDefault();
+        } else if (ev.altKey) {
+            if (ev.keyCode == 0x4E) { //N
+                nextText();
+                ev.preventDefault();
+            } else if (ev.keyCode == 0x50) { //P
+                prevText();
+                ev.preventDefault();
+            } else if (ev.keyCode == 0x53) { //S
+                start();
+                ev.preventDefault();
+            } else if (ev.keyCode == 0x43) { //C
+                clearOutput();
+                ev.preventDefault();
+            }
+        }
+    }
+
+    $(document).ready(function() {
+        //Fill combobox:
+        var options = "";
+        for (var i=0; i < texts.length; ++i) {
+            var name = "" + (i+1) + ": " + texts[i].substr(0, 20);
+            options += "<option value='" + i + "'>" + name + "</option>\n";
+        }
+        $("#selectText").html(options);
+
+        //Show first text and start:
+        start();
+    });
+</script>
+
+<style>
+
+.backgroundGray {
+    background-color: rgb(250, 250, 250);
+}
+
+.wpmStyle {
+    font-family: "Lucida Sans Unicode",sans-serif;
+    font-size: 19.2px;
+    font-weight: 700;
+    color: rgb(68, 102, 102);
+    line-height: 23px;
+    float: right;
+}
+
+#typetext {
+    font-family: Arial,serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(68, 102, 102);
+    line-height: 24px;
+    width: 610px;
+    text-align: left;
+
+    margin: 0px;
+    padding: 0px;
+    font-stretch: normal;
+    font-variant: normal;
+    font-size-adjust: none;
+    font-style: normal;
+}
+
+.typerInput {
+    font-family: Arial,serif;
+    font-size: 26px;
+    color: rgb(85,85,85);
+    line-height: 30px;
+    height: 35px;
+
+    width: 606;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.typerInputWrong {
+    background-color: #d08383;
+}
+
+.outputDiv {
+    border-style: solid; 
+    border-width: 1px;
+
+    font-family: Arial,serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(68, 102, 102);
+    line-height: 24px;
+    width: 600px;
+    margin-left: 15px;
+}
+
+.outputLatestStyle {
+    font-weight: bold;
+}
+    
+</style>
+
+</head>
+<body onkeydown="return shortcuts(event);">
+
+<br>
+<br>
+<br>
+<br>
+
+<table style="width: 100%;">
+    <tr>
+        <td align="center">
+            <div class="backgroundGray" style="text-align: center; width: 630px;">
+
+
+
+                <span class="wpmStyle"> <span id="labelWpm"> 0 </span> wpm </span>
+
+                <br>
+                <br>
+
+                <div id="typetext" style="margin-left: 15px;">
+                    &nbsp;
+                </div>
+
+                <div style="height: 22px;"> </div>
+
+                <input id="typer" name="typer" 
+                    class="typerInput" type="text" 
+                    autocorrect="off" autocapitalize="off"
+                    value="" 
+                    onkeypress="return typerKeypress(event);"
+                />
+
+                <br>
+
+                <button id="startButton" onclick="return start();" title="Start (ALT+S)" >Start</button>
+                <button onclick="return prevText();" title="Prev Text (ALT+P)">Prev</button>
+                <button onclick="return nextText();" title="Next Text (ALT+N)">Next</button>
+                <button onclick="return clearOutput();" title="Clear output (ALT+C)">Clear Output</button>
+
+                <select id="selectText" onchange="return textSelectedCombo();"></select>
+                <br>
+
+                <br>
+                <br>
+                <br>
+
+                <hr style="color: #ffffff;">
+                <span style="font-family: Arial,serif; font-size: 11px; float: right; margin-right: 15px;">Average: <span id="averageWpm">0</span> wpm</span>
+                <br>
+                <div id="output" class="outputDiv">
+                    <span id="outputLatest" class="outputLatestStyle">&nbsp;</span>
+                    <span id="outputRest">&nbsp;</span>
+                </div>
+                
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
